@@ -1,0 +1,30 @@
+{
+    "name": "weather-rss",
+    "version": "1.0.0",
+    "description": "",
+    "main": "start.js",
+    "scripts": {
+        "build": "tsc",
+        "watch": "tsc -w",
+        "start": "nodemon -r dotenv/config build/start.js",
+        "start-prod": "node -r dotenv/config build/start.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/KennyTheBard/weather-rss.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/KennyTheBard/weather-rss/issues"
+    },
+    "homepage": "https://github.com/KennyTheBard/weather-rss#readme",
+    "dependencies": {
+        "@types/node": "^16.11.6",
+        "dotenv": "^10.0.0",
+        "rss-parser": "^3.12.0"
+    },
+    "devDependencies": {
+        "@types/dotenv": "^8.2.0"
+    }
+}

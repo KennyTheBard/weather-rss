@@ -1,0 +1,385 @@
+<?xml version="1.0"?>
+<Prognoza_AdmNatMeteorologie_Romania>
+  <tara nume="Romania">
+    <localitate nume="Arad">
+      <DataPrognozei>2021-11-03</DataPrognozei>
+      <prognoza data="2021-11-04">
+        <temp_min unit="Celsius">12</temp_min>
+        <temp_max unit="Celsius">22</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER TEMPORAR NOROS, PLOAIE SLABA</fenomen_descriere>
+        <fenomen_simbol>002-2</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-05">
+        <temp_min unit="Celsius">12</temp_min>
+        <temp_max unit="Celsius">12</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER MAI MULT NOROS, PLOAIE SLABA</fenomen_descriere>
+        <fenomen_simbol>202-2</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-06">
+        <temp_min unit="Celsius">7</temp_min>
+        <temp_max unit="Celsius">13</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER PARTIAL NOROS</fenomen_descriere>
+        <fenomen_simbol>001-2</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-07">
+        <temp_min unit="Celsius">2</temp_min>
+        <temp_max unit="Celsius">12</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER VARIABIL</fenomen_descriere>
+        <fenomen_simbol>001</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-08">
+        <temp_min unit="Celsius">4</temp_min>
+        <temp_max unit="Celsius">13</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER PARTIAL NOROS</fenomen_descriere>
+        <fenomen_simbol>001-2</fenomen_simbol>
+      </prognoza>
+    </localitate>
+    <localitate nume="Botosani">
+      <DataPrognozei>2021-11-03</DataPrognozei>
+      <prognoza data="2021-11-04">
+        <temp_min unit="Celsius">6</temp_min>
+        <temp_max unit="Celsius">18</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER PARTIAL NOROS</fenomen_descriere>
+        <fenomen_simbol>001-2</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-05">
+        <temp_min unit="Celsius">11</temp_min>
+        <temp_max unit="Celsius">20</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER PARTIAL NOROS</fenomen_descriere>
+        <fenomen_simbol>001-2</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-06">
+        <temp_min unit="Celsius">8</temp_min>
+        <temp_max unit="Celsius">13</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER PARTIAL NOROS</fenomen_descriere>
+        <fenomen_simbol>001-2</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-07">
+        <temp_min unit="Celsius">2</temp_min>
+        <temp_max unit="Celsius">15</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER VARIABIL</fenomen_descriere>
+        <fenomen_simbol>001</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-08">
+        <temp_min unit="Celsius">3</temp_min>
+        <temp_max unit="Celsius">14</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER PARTIAL NOROS</fenomen_descriere>
+        <fenomen_simbol>001-2</fenomen_simbol>
+      </prognoza>
+    </localitate>
+    <localitate nume="Bucuresti">
+      <DataPrognozei>2021-11-03</DataPrognozei>
+      <prognoza data="2021-11-04">
+        <temp_min unit="Celsius">8</temp_min>
+        <temp_max unit="Celsius">20</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER VARIABIL</fenomen_descriere>
+        <fenomen_simbol>001</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-05">
+        <temp_min unit="Celsius">10</temp_min>
+        <temp_max unit="Celsius">22</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER TEMPORAR NOROS, CEATA</fenomen_descriere>
+        <fenomen_simbol>008</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-06">
+        <temp_min unit="Celsius">11</temp_min>
+        <temp_max unit="Celsius">18</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER MAI MULT NOROS</fenomen_descriere>
+        <fenomen_simbol>200</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-07">
+        <temp_min unit="Celsius">9</temp_min>
+        <temp_max unit="Celsius">15</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER PARTIAL NOROS</fenomen_descriere>
+        <fenomen_simbol>001-2</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-08">
+        <temp_min unit="Celsius">8</temp_min>
+        <temp_max unit="Celsius">18</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER TEMPORAR NOROS, PLOAIE IMPORTANTA CANTITATIV</fenomen_descriere>
+        <fenomen_simbol>002</fenomen_simbol>
+      </prognoza>
+    </localitate>
+    <localitate nume="Cluj-Napoca">
+      <DataPrognozei>2021-11-03</DataPrognozei>
+      <prognoza data="2021-11-04">
+        <temp_min unit="Celsius">7</temp_min>
+        <temp_max unit="Celsius">20</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER PARTIAL NOROS</fenomen_descriere>
+        <fenomen_simbol>001-2</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-05">
+        <temp_min unit="Celsius">10</temp_min>
+        <temp_max unit="Celsius">15</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER TEMPORAR NOROS, PLOAIE SLABA</fenomen_descriere>
+        <fenomen_simbol>002-2</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-06">
+        <temp_min unit="Celsius">7</temp_min>
+        <temp_max unit="Celsius">12</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER PARTIAL NOROS</fenomen_descriere>
+        <fenomen_simbol>001-2</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-07">
+        <temp_min unit="Celsius">3</temp_min>
+        <temp_max unit="Celsius">11</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER VARIABIL</fenomen_descriere>
+        <fenomen_simbol>001</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-08">
+        <temp_min unit="Celsius">2</temp_min>
+        <temp_max unit="Celsius">10</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER PARTIAL NOROS</fenomen_descriere>
+        <fenomen_simbol>001-2</fenomen_simbol>
+      </prognoza>
+    </localitate>
+    <localitate nume="Constanta">
+      <DataPrognozei>2021-11-03</DataPrognozei>
+      <prognoza data="2021-11-04">
+        <temp_min unit="Celsius">12</temp_min>
+        <temp_max unit="Celsius">19</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER VARIABIL</fenomen_descriere>
+        <fenomen_simbol>001</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-05">
+        <temp_min unit="Celsius">14</temp_min>
+        <temp_max unit="Celsius">19</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER VARIABIL</fenomen_descriere>
+        <fenomen_simbol>001</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-06">
+        <temp_min unit="Celsius">13</temp_min>
+        <temp_max unit="Celsius">16</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER MAI MULT NOROS</fenomen_descriere>
+        <fenomen_simbol>200</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-07">
+        <temp_min unit="Celsius">11</temp_min>
+        <temp_max unit="Celsius">15</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER PARTIAL NOROS</fenomen_descriere>
+        <fenomen_simbol>001-2</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-08">
+        <temp_min unit="Celsius">11</temp_min>
+        <temp_max unit="Celsius">18</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER TEMPORAR NOROS, PLOAIE SLABA</fenomen_descriere>
+        <fenomen_simbol>002-2</fenomen_simbol>
+      </prognoza>
+    </localitate>
+    <localitate nume="Craiova">
+      <DataPrognozei>2021-11-03</DataPrognozei>
+      <prognoza data="2021-11-04">
+        <temp_min unit="Celsius">9</temp_min>
+        <temp_max unit="Celsius">19</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER VARIABIL</fenomen_descriere>
+        <fenomen_simbol>001</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-05">
+        <temp_min unit="Celsius">11</temp_min>
+        <temp_max unit="Celsius">22</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER VARIABIL</fenomen_descriere>
+        <fenomen_simbol>001</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-06">
+        <temp_min unit="Celsius">10</temp_min>
+        <temp_max unit="Celsius">16</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER MAI MULT NOROS, PLOAIE SLABA</fenomen_descriere>
+        <fenomen_simbol>202-2</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-07">
+        <temp_min unit="Celsius">7</temp_min>
+        <temp_max unit="Celsius">14</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER PARTIAL NOROS</fenomen_descriere>
+        <fenomen_simbol>001-2</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-08">
+        <temp_min unit="Celsius">7</temp_min>
+        <temp_max unit="Celsius">18</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER TEMPORAR NOROS, PLOAIE SLABA</fenomen_descriere>
+        <fenomen_simbol>002-2</fenomen_simbol>
+      </prognoza>
+    </localitate>
+    <localitate nume="Iasi">
+      <DataPrognozei>2021-11-03</DataPrognozei>
+      <prognoza data="2021-11-04">
+        <temp_min unit="Celsius">7</temp_min>
+        <temp_max unit="Celsius">18</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER PARTIAL NOROS</fenomen_descriere>
+        <fenomen_simbol>001-2</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-05">
+        <temp_min unit="Celsius">11</temp_min>
+        <temp_max unit="Celsius">21</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER VARIABIL</fenomen_descriere>
+        <fenomen_simbol>001</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-06">
+        <temp_min unit="Celsius">10</temp_min>
+        <temp_max unit="Celsius">15</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER PARTIAL NOROS</fenomen_descriere>
+        <fenomen_simbol>001-2</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-07">
+        <temp_min unit="Celsius">4</temp_min>
+        <temp_max unit="Celsius">16</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER VARIABIL</fenomen_descriere>
+        <fenomen_simbol>001</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-08">
+        <temp_min unit="Celsius">5</temp_min>
+        <temp_max unit="Celsius">15</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER PARTIAL NOROS</fenomen_descriere>
+        <fenomen_simbol>001-2</fenomen_simbol>
+      </prognoza>
+    </localitate>
+    <localitate nume="Rm. Valcea">
+      <DataPrognozei>2021-11-03</DataPrognozei>
+      <prognoza data="2021-11-04">
+        <temp_min unit="Celsius">10</temp_min>
+        <temp_max unit="Celsius">22</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER VARIABIL</fenomen_descriere>
+        <fenomen_simbol>001</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-05">
+        <temp_min unit="Celsius">11</temp_min>
+        <temp_max unit="Celsius">24</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER VARIABIL</fenomen_descriere>
+        <fenomen_simbol>001</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-06">
+        <temp_min unit="Celsius">10</temp_min>
+        <temp_max unit="Celsius">17</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER MAI MULT NOROS, PLOAIE SLABA</fenomen_descriere>
+        <fenomen_simbol>202-2</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-07">
+        <temp_min unit="Celsius">7</temp_min>
+        <temp_max unit="Celsius">15</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER MAI MULT NOROS</fenomen_descriere>
+        <fenomen_simbol>200</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-08">
+        <temp_min unit="Celsius">7</temp_min>
+        <temp_max unit="Celsius">18</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER TEMPORAR NOROS, PLOAIE SLABA</fenomen_descriere>
+        <fenomen_simbol>002-2</fenomen_simbol>
+      </prognoza>
+    </localitate>
+    <localitate nume="Sibiu">
+      <DataPrognozei>2021-11-03</DataPrognozei>
+      <prognoza data="2021-11-04">
+        <temp_min unit="Celsius">7</temp_min>
+        <temp_max unit="Celsius">23</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER VARIABIL</fenomen_descriere>
+        <fenomen_simbol>001</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-05">
+        <temp_min unit="Celsius">9</temp_min>
+        <temp_max unit="Celsius">19</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER PARTIAL NOROS</fenomen_descriere>
+        <fenomen_simbol>001-2</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-06">
+        <temp_min unit="Celsius">8</temp_min>
+        <temp_max unit="Celsius">14</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER MAI MULT NOROS, PLOAIE SLABA</fenomen_descriere>
+        <fenomen_simbol>202-2</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-07">
+        <temp_min unit="Celsius">4</temp_min>
+        <temp_max unit="Celsius">14</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER VARIABIL</fenomen_descriere>
+        <fenomen_simbol>001</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-08">
+        <temp_min unit="Celsius">4</temp_min>
+        <temp_max unit="Celsius">13</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER TEMPORAR NOROS, PLOAIE SLABA</fenomen_descriere>
+        <fenomen_simbol>002-2</fenomen_simbol>
+      </prognoza>
+    </localitate>
+    <localitate nume="Sulina">
+      <DataPrognozei>2021-11-03</DataPrognozei>
+      <prognoza data="2021-11-04">
+        <temp_min unit="Celsius">12</temp_min>
+        <temp_max unit="Celsius">16</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER PARTIAL NOROS</fenomen_descriere>
+        <fenomen_simbol>001-2</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-05">
+        <temp_min unit="Celsius">14</temp_min>
+        <temp_max unit="Celsius">17</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER VARIABIL</fenomen_descriere>
+        <fenomen_simbol>001</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-06">
+        <temp_min unit="Celsius">14</temp_min>
+        <temp_max unit="Celsius">16</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER MAI MULT NOROS</fenomen_descriere>
+        <fenomen_simbol>200</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-07">
+        <temp_min unit="Celsius">10</temp_min>
+        <temp_max unit="Celsius">13</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER PARTIAL NOROS</fenomen_descriere>
+        <fenomen_simbol>001-2</fenomen_simbol>
+      </prognoza>
+      <prognoza data="2021-11-08">
+        <temp_min unit="Celsius">11</temp_min>
+        <temp_max unit="Celsius">15</temp_max>
+        <!--Simbolul-indicativul fenomenului este util pentru asocierea cu simboluri utilizate de catre cei ce parcurg acest fisier.-->
+        <fenomen_descriere>CER TEMPORAR NOROS, PLOAIE SLABA</fenomen_descriere>
+        <fenomen_simbol>002-2</fenomen_simbol>
+      </prognoza>
+    </localitate>
+  </tara>
+</Prognoza_AdmNatMeteorologie_Romania>
