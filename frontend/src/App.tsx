@@ -17,7 +17,7 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-
+    this.refreshData();
   }
 
   refreshData = async () => {
@@ -38,7 +38,7 @@ class App extends React.Component {
       <div>
         <input type="button" onClick={this.refreshData} value="Refresh"/>
         <p>Alerts</p>
-        {this.state.alerts.map(alert => <div dangerouslySetInnerHTML={{ __html: alert }} />)}
+        {this.state.alerts.map((alert, idx) => <div key={idx} dangerouslySetInnerHTML={{ __html: alert }} />)}
         <p>Forecasts</p>
         {this.state.forecasts.map(f => <p>{f.name}: {f.forecasts.length}</p>)}
       </div>

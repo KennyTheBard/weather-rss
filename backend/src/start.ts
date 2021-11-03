@@ -1,67 +1,29 @@
-import axios from 'axios';
-import Parser from 'rss-parser';
-import { parse as xmlParse } from 'fast-xml-parser';
+import { WeatherAlertsService } from './services/weather-alerts.service';
+import { ForecastService } from './services/forecast.service';
+import { Request, Response } from 'express';
+import express from 'express';
+import cors from 'cors';
+import * as dotenv from 'dotenv';
 
-const rss: Parser = new Parser({
-   defaultRSS: 2.0,
-   xml2js: {
-      emptyTag: '--EMPTY--',
-   }
+
+dotenv.config();
+
+const app = express();
+
+app.use(express.json());
+app.use(cors());
+
+const forecastService = new ForecastService();
+const alertsService = new WeatherAlertsService();
+
+app.get('/data', async (req: Request, res: Response) => {
+   res.status(200).send({
+      forecasts: await forecastService.getForecast(),
+      alerts: await alertsService.getAlerts()
+   });
 });
 
-async function bootstrap() {
-   try {
-      const alertsFeed = await rss.parseURL('https://www.meteoromania.ro/anm2/avertizari-rss.php');
-      
-      alertsFeed.items.map(i => i.content).forEach(i => console.log(i));
-
-      const res = await axios.get('https://www.meteoromania.ro/anm/prognoza-orase-xml.php');
-
-      const jsonObj = xmlParse(res.data, {
-         attributeNamePrefix : "@_",
-         parseAttributeValue: true,
-         ignoreAttributes : false
-      });
-      const forecasts: CountryForecast[] = jsonObj['Prognoza_AdmNatMeteorologie_Romania'].tara.localitate.map(l => buildCountryForecast(l));
-      console.log(forecasts);
-
-   } catch (e) {
-      console.error(e);
-   }
-}
-
-const buildCountryForecast = (jsonForecast: any): CountryForecast => {
-   return {
-      name: jsonForecast['@_nume'],
-      date: jsonForecast['DataPrognozei'],
-      forecasts: jsonForecast.prognoza.map(p => {
-         return {
-            date: p['@_data'],
-            description: p['fenomen_descriere'],
-            temp: {
-               min: p['temp_min'],
-               max: p['temp_max']
-            }
-         }
-      })
-   };
-}
-
-interface CountryForecast {
-   name: string;
-   date: string;
-   forecasts: DailyForecast[];
-}
-
-interface DailyForecast {
-   date: string;
-   temp: TemperatureInterval;
-   description: string;
-}
-
-interface TemperatureInterval {
-   min: number;
-   max: number;
-}
-
-bootstrap();
+const port = process.env.PORT;
+app.listen(port, () => {
+   console.log(`App listening on the port ${port}`);
+});
