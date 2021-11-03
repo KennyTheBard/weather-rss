@@ -13,14 +13,13 @@ async function bootstrap() {
    try {
       const alertsFeed = await rss.parseURL('https://www.meteoromania.ro/anm2/avertizari-rss.php');
       
-      // alertsFeed.items.forEach(i => console.log(Object.keys(i)));
+      alertsFeed.items.map(i => i.content).forEach(i => console.log(i));
 
       const res = await axios.get('https://www.meteoromania.ro/anm/prognoza-orase-xml.php');
 
       const jsonObj = xmlParse(res.data, {
          attributeNamePrefix : "@_",
          parseAttributeValue: true,
-         // attrNodeName: "data", //default is 'false'
          ignoreAttributes : false
       });
       const forecasts: CountryForecast[] = jsonObj['Prognoza_AdmNatMeteorologie_Romania'].tara.localitate.map(l => buildCountryForecast(l));
@@ -64,6 +63,5 @@ interface TemperatureInterval {
    min: number;
    max: number;
 }
-
 
 bootstrap();

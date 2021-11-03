@@ -1,8 +1,8 @@
 ## Web Dashboard:
-- [ ] init React project (with TS and SASS)
-- [ ] add Redux for state management
+- [x] init React project (with TS and SASS)
+- [ ] ~~add Redux for state management~~
 - [ ] add React-Material for styling
-- [ ] implement weather services
+- [x] implement weather services
 - [ ] implement dashboard page
 - [ ] add Webpack to bundle the service
 - [ ] find low-spec server
