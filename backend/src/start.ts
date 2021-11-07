@@ -4,9 +4,30 @@ import { Request, Response } from 'express';
 import express from 'express';
 import cors from 'cors';
 import * as dotenv from 'dotenv';
+import {
+   createLogger,
+   format,
+   transports
+} from 'winston';
 
 
 dotenv.config();
+
+const logger = createLogger({
+   level: 'info',
+   format: format.combine(
+      format.timestamp({ format: 'YYYY/MM/DD HH:mm:ss' }),
+      format.colorize({
+         level: true
+      }),
+      format.printf(
+         info => `${info.level} [${info.timestamp}]: ${info.message}`
+      )
+   ),
+   transports: [
+      new transports.Console(),
+   ],
+});
 
 const app = express();
 
@@ -17,6 +38,8 @@ const forecastService = new ForecastService();
 const alertsService = new WeatherAlertsService();
 
 app.get('/data', async (req: Request, res: Response) => {
+   logger.info('Refresh dashboard data');
+
    res.status(200).send({
       forecasts: await forecastService.getForecast(),
       alerts: await alertsService.getAlerts()

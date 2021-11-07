@@ -25,8 +25,8 @@ const buildCountryForecast = (jsonForecast: any): CountryForecast => {
             date: p['@_data'],
             description: p['fenomen_descriere'],
             temp: {
-               min: p['temp_min'],
-               max: p['temp_max']
+               min: p['temp_min']['#text'],
+               max: p['temp_max']['#text']
             }
          }
       })

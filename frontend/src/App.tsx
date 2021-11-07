@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import ForecastDay from './components/forecast-day';
 import DataService from './services/data-service';
 import { CountryForecast } from './type';
 
@@ -9,7 +10,7 @@ type AppState = {
   alerts: string[];
 }
 
-class App extends React.Component {
+export default class App extends React.Component {
 
   state: AppState = {
     forecasts: [],
@@ -36,14 +37,22 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <input type="button" onClick={this.refreshData} value="Refresh"/>
+        <input type="button" onClick={this.refreshData} value="Refresh" />
         <p>Alerts</p>
         {this.state.alerts.map((alert, idx) => <div key={idx} dangerouslySetInnerHTML={{ __html: alert }} />)}
-        <p>Forecasts</p>
-        {this.state.forecasts.map(f => <p>{f.name}: {f.forecasts.length}</p>)}
+
+        {this.state.forecasts.map(f =>
+          <div>
+            <div>
+              {f.name}
+            </div>
+            <div>
+              {f.forecasts.map(fc => <ForecastDay forecast={fc}></ForecastDay>)}
+            </div>
+          </div>
+        )}
       </div>
     );
   }
 }
 
-export default App;
