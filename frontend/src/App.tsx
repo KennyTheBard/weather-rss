@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.css';
-import ForecastDay from './components/forecast-day';
+import './App.scss';
+import ForecastCountry from './components/forecast-country';
 import DataService from './services/data-service';
 import { CountryForecast } from './type';
 
@@ -38,19 +38,13 @@ export default class App extends React.Component {
     return (
       <div>
         <input type="button" onClick={this.refreshData} value="Refresh" />
-        <p>Alerts</p>
-        {this.state.alerts.map((alert, idx) => <div key={idx} dangerouslySetInnerHTML={{ __html: alert }} />)}
+        <div className='alerts'>
+          {this.state.alerts.map((alert, idx) => <div key={idx} dangerouslySetInnerHTML={{ __html: alert }} />)}
+        </div>
 
-        {this.state.forecasts.map(f =>
-          <div>
-            <div>
-              {f.name}
-            </div>
-            <div>
-              {f.forecasts.map(fc => <ForecastDay forecast={fc}></ForecastDay>)}
-            </div>
-          </div>
-        )}
+        <div className='forecast'>
+          {this.state.forecasts.map(f => <ForecastCountry forecast={f}></ForecastCountry>)}
+        </div>
       </div>
     );
   }

@@ -1,0 +1,65 @@
+.forecast {
+    width: 50%;
+    .forecast-country {
+        margin: 1rem;
+        display: flex;
+        flex-direction: row;
+        .forecast-country-name {
+            font-weight: bolder;
+            text-align: right;
+            padding-right: 1.5rem;
+            width: 15%;
+        }
+        .forecast-country-daily {
+            display: flex;
+            flex-direction: row;
+            .forecast-country-daily-day {
+                width: 6rem;
+                padding: 1rem 0.5rem;
+                background: #181818;
+                text-align: center;
+                color: #dcdcdc;
+                &:hover {
+                    filter: brightness(100%);
+                    background: #303030;
+                    .forecast-country-daily-day-tooltip {
+                        visibility: visible;
+                    }
+                }
+                &:first-child {
+                    border-radius: 0.75rem 0 0 0.75rem;
+                }
+                &:last-child {
+                    border-radius: 0 0.75rem 0.75rem 0;
+                }
+                &:not(:last-child) {
+                    border-right: 0.01rem solid gray;
+                }
+                .forecast-country-daily-day-tooltip {
+                    visibility: hidden;
+                    width: 120px;
+                    background-color: darkgray;
+                    color: black;
+                    text-align: center;
+                    border-radius: 6px;
+                    padding: 5px 0;
+                    position: absolute;
+                    z-index: 1;
+                    bottom: 90%;
+                    left: 80%;
+                    margin-left: -60px;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 100%;
+                        left: 20%;
+                        margin-left: -5px;
+                        border-width: 5px;
+                        border-style: solid;
+                        border-color: darkgray transparent transparent transparent;
+                    }
+                }
+            }
+        }
+    }
+}
