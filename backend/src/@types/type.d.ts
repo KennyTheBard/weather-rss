@@ -1,3 +1,8 @@
+export type WeatherData = {
+   alerts: string[];
+   forecasts: CountryForecast[];
+}
+
 export type CountryForecast = {
    name: string;
    date: string;
