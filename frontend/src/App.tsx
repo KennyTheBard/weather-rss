@@ -1,20 +1,17 @@
 import React from 'react';
 import './App.scss';
+import Alert from './components/alert';
 import ForecastCountry from './components/forecast-country';
 import DataService from './services/data-service';
-import { CountryForecast } from './type';
+import { AppData } from './type';
 
-
-type AppState = {
-  forecasts: CountryForecast[];
-  alerts: string[];
-}
 
 export default class App extends React.Component {
 
-  state: AppState = {
+  state: AppData & {[key: string]: any} = {
     forecasts: [],
-    alerts: []
+    alerts: [],
+    isLoading: false
   };
 
   componentDidMount() {
@@ -22,28 +19,32 @@ export default class App extends React.Component {
   }
 
   refreshData = async () => {
-    console.log("Refresh data in progress...");
+    this.setState({
+      isLoading: true
+    });
 
     const data = await DataService.getFreshData();
 
-    console.log("Data refreshened!")
-
     this.setState({
       forecasts: data.forecasts,
-      alerts: data.alerts
+      alerts: data.alerts,
+      isLoading: false
     });
   }
 
   render() {
     return (
       <div>
-        <input type="button" onClick={this.refreshData} value="Refresh" />
-        <div className='alerts'>
-          {this.state.alerts.map((alert, idx) => <div key={idx} dangerouslySetInnerHTML={{ __html: alert }} />)}
+        <div className='refresh-container'>
+          <input type="button" onClick={this.refreshData} value='Refresh' disabled={this.state.isLoading} />
         </div>
-
-        <div className='forecast'>
-          {this.state.forecasts.map(f => <ForecastCountry forecast={f}></ForecastCountry>)}
+        <div className='content'>
+          <div className='forecast'>
+            {this.state.forecasts.map((f, i) => <ForecastCountry key={i} forecast={f}></ForecastCountry>)}
+          </div>
+          <div className='alerts'>
+            {this.state.alerts.map((a, i) => <Alert alert={a}></Alert>)}
+          </div>
         </div>
       </div>
     );

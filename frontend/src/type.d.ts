@@ -1,6 +1,6 @@
 export type AppData = {
    forecasts: CountryForecast[];
-   alerts: string[];
+   alerts: AlertData[];
 }
 
 export type CountryForecast = {
@@ -18,4 +18,12 @@ export type DailyForecast = {
 export type TemperatureInterval = {
    min: number;
    max: number;
+}
+
+export type AlertData = {
+   code: string,
+   date: string;
+   zones: string;
+   betweenHours: string;
+   description: string;
 }
