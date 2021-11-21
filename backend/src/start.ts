@@ -1,5 +1,4 @@
-import { WeatherAlertsService } from './services/weather-alerts.service';
-import { ForecastService } from './services/forecast.service';
+import { WeatherService } from './services/weather.service';
 import { Request, Response } from 'express';
 import express from 'express';
 import cors from 'cors';
@@ -9,9 +8,7 @@ import {
    format,
    transports
 } from 'winston';
-import * as schedule from 'node-schedule';
-import CacheService from './services/cache.service';
-import { WeatherData } from './@types/type';
+import WeatherDataCache from './services/cache.service';
 
 
 (async () => {
@@ -33,25 +30,12 @@ import { WeatherData } from './@types/type';
       ],
    });
 
-   const cacheService = new CacheService();
-   const forecastService = new ForecastService();
-   const alertsService = new WeatherAlertsService();
+   const weatherService = new WeatherService();
 
-   const loadWeatherData = async () => {
-      console.log('Load weather data');
-      const data: WeatherData = {
-         forecasts: await forecastService.getForecast(),
-         alerts: await alertsService.getAlerts()
-      };
-
-      cacheService.set(data);
-   };
-
-   const rule = new schedule.RecurrenceRule();
-   rule.minute = new schedule.Range(0, 59, 5);
-
-   schedule.scheduleJob(rule, loadWeatherData);
-   await loadWeatherData();
+   const cacheService = new WeatherDataCache(
+      weatherService
+   );
+   await cacheService.updateData();
 
    const app = express();
 
