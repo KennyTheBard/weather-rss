@@ -8,7 +8,8 @@ import {
    format,
    transports
 } from 'winston';
-import WeatherDataCache from './services/cache.service';
+import WeatherDataCache from './cache/weather-data.cache';
+import { Tedis } from 'tedis';
 
 
 (async () => {
@@ -31,11 +32,15 @@ import WeatherDataCache from './services/cache.service';
    });
 
    const weatherService = new WeatherService();
+   const tedis = new Tedis({
+      port: 6379,
+      host: "127.0.0.1"
+   });
 
    const cacheService = new WeatherDataCache(
+      tedis,
       weatherService
    );
-   await cacheService.updateData();
 
    const app = express();
 
@@ -45,7 +50,7 @@ import WeatherDataCache from './services/cache.service';
    app.get('/data', async (req: Request, res: Response) => {
       logger.info('Refresh dashboard data');
 
-      res.status(200).send(cacheService.get());
+      res.status(200).send(await cacheService.get());
    });
 
    const port = process.env.PORT;
