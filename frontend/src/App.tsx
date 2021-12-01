@@ -1,3 +1,4 @@
+import moment from 'moment';
 import React from 'react';
 import './App.scss';
 import Alert from './components/alert';
@@ -11,11 +12,13 @@ export default class App extends React.Component {
   state: AppData & {[key: string]: any} = {
     forecasts: [],
     alerts: [],
-    isLoading: false
+    isLoading: false,
   };
 
   componentDidMount() {
     this.refreshData();
+
+    setInterval(this.updateRefreshCount, 1000);
   }
 
   refreshData = async () => {
@@ -25,18 +28,43 @@ export default class App extends React.Component {
 
     const data = await DataService.getFreshData();
 
+    console.log(data.timestamp);
+
     this.setState({
       forecasts: data.forecasts,
       alerts: data.alerts,
+      timestamp: data.timestamp,
       isLoading: false
     });
+  }
+
+  updateRefreshCount = () => {
+    this.setState({
+      secondsSinceFreshData:  Math.floor(moment().diff(moment(this.state.timestamp), 'second', true))
+    });
+  }
+
+  formatSecondsToHours = (seconds: number): string => {
+    const formatNumber = (x: number) => x.toLocaleString('en-US', {
+      minimumIntegerDigits: 2
+    });
+
+    if (seconds < 60) {
+      return `${seconds} seconds`
+    }
+
+    if (seconds < 60 * 60) {
+      return `${Math.floor(seconds / 60)}:${formatNumber(seconds % 60)} minutes`
+    }
+
+    return `${Math.floor(seconds / (60 * 60))}:${formatNumber(Math.floor(seconds / 60))}:${formatNumber(seconds % 60)} hours`
   }
 
   render() {
     return (
       <div>
         <div className='refresh-container'>
-          <input type="button" onClick={this.refreshData} value='Refresh' disabled={this.state.isLoading} />
+          <input type="button" onClick={this.refreshData} value={'Refresh' + (this.state.secondsSinceFreshData ? ` (${this.formatSecondsToHours(this.state.secondsSinceFreshData)} old)` : '')} disabled={this.state.isLoading} />
         </div>
         <div className='content'>
           <div className='forecast'>

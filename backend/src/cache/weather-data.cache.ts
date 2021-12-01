@@ -2,6 +2,7 @@ import { WeatherService } from '../services/weather.service';
 import { scheduleJob } from 'node-schedule';
 import { CountryForecast, WeatherData } from '../@types/type';
 import { Tedis } from 'tedis';
+import moment from 'moment';
 
 
 const REDIS_KEY = 'weather';
@@ -30,7 +31,8 @@ export default class WeatherDataCache {
 
       return {
          forecasts: [],
-         alerts: []
+         alerts: [],
+         timestamp: moment().valueOf(),
       };
    }
 
@@ -48,7 +50,8 @@ export default class WeatherDataCache {
 
       const data: WeatherData = {
          forecasts,
-         alerts
+         alerts,
+         timestamp: moment().valueOf()
       };
       this.cachedData = data;
       this.tedis.set(REDIS_KEY, JSON.stringify(data));

@@ -1,6 +1,7 @@
 export type AppData = {
    forecasts: CountryForecast[];
    alerts: string[];
+   timestamp?: number;
 }
 
 export type CountryForecast = {
