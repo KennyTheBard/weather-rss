@@ -1,7 +1,7 @@
 import Parser from 'rss-parser';
 import axios from 'axios';
 import { parse as xmlParse } from 'fast-xml-parser';
-import { AlertData, CountryForecast } from '../@types/type';
+import { CountryForecast } from '../@types/type';
 
 
 export class WeatherService {
@@ -27,28 +27,12 @@ export class WeatherService {
       return jsonObj['Prognoza_AdmNatMeteorologie_Romania'].tara.localitate.map((l: any) => this.buildCountryForecast(l));
    }
 
-   getAlerts = async (): Promise<AlertData[]> => {
+   getAlerts = async (): Promise<string[]> => {
       const alertsFeed = await this.rss.parseURL('https://www.meteoromania.ro/anm2/avertizari-rss.php');
       return alertsFeed.items
          .map(i => i.content)
          .map(i => i as string)
-         .map(i => this.extractAlertData(i))
          .filter(i => i !== null);
-   }
-
-   private extractAlertData = (content: string): AlertData => {
-      const clearedContent = content.split(/\s+/).join(' ').split(/<.*?>/).map(e => e.trim()).filter(e => e.length > 0);
-      if (clearedContent[0] === 'Nu sunt avertizari meteo !') {
-         return null;
-      }
-
-      return {
-         code: clearedContent.find(s => s.includes('COD :')).split(':').slice(1).join(':').trim(),
-         date: clearedContent.find(s => s.includes('Ziua/luna/anul :')).split(':').slice(1).join(':').trim(),
-         zones: clearedContent.find(s => s.includes('In zona :')).split(':').slice(1).join(':').trim(),
-         betweenHours: clearedContent.find(s => s.includes('Intre orele :')).split(':').slice(1).join(':').trim(),
-         description: clearedContent.find(s => s.includes('Se vor semnala :')).split(':').slice(1).join(':').trim()
-      };
    }
 
    private buildCountryForecast = (jsonForecast: any): CountryForecast => {

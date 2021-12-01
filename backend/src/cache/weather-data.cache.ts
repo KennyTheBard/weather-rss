@@ -1,6 +1,6 @@
 import { WeatherService } from '../services/weather.service';
 import { scheduleJob } from 'node-schedule';
-import { AlertData, CountryForecast, WeatherData } from '../@types/type';
+import { CountryForecast, WeatherData } from '../@types/type';
 import { Tedis } from 'tedis';
 
 
@@ -36,7 +36,7 @@ export default class WeatherDataCache {
 
    updateData = async () => {
       let forecasts: CountryForecast[];
-      let alerts: AlertData[];
+      let alerts: string[];
 
       try {
          forecasts = await this.weatherService.getForecast();

@@ -20,33 +20,14 @@
 }
 
 .alerts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     .alert {
         margin-top: 30px;
-        border: 2px solid black;
-        background-color: #181818;
-        color: #dcdcdc;
         width: 50rem;
-        height: 10rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        .alert-datetime {}
-        .alert-zones {}
-        .alert-description {}
-        .alert-color {
-            color: black;
-            text-align: center;
-            padding-top: 5px;
-            height: 25px;
-            &.galben {
-                background-color: yellow;
-            }
-            &.portocaliu {
-                background-color: orange;
-            }
-            &.rosu {
-                background-color: red;
-            }
+        img {
+            max-height: 400px;
         }
     }
 }
